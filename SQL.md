@@ -52,9 +52,73 @@ DELETE FROM table_name
 WHERE condition;
 ```
 
-如果没有WHERE条件，DELETE会将每一条记录删除。
+如果没有WHERE条件，DELETE会将所有记录删除。
 
 ### 高级SQL
+
+**SELECT TOP**及**LIMIT**子句用于规定要返回记录的数目。
+
+```sql
+SELECT column_name(s)
+FROM table_name
+LIMIT number;
+```
+
+**LIKE**用于在**WHERE**子句中搜索列的指定模式：
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE column LIKE pattern;
+```
+
+**SQL通配符**：
+
+| 通配符                         | 描述                       |
+| :----------------------------- | :------------------------- |
+| %                              | 替代 0 个或多个字符        |
+| _                              | 替代一个字符               |
+| [*charlist*]                   | 字符列中的任何单一字符     |
+| [^*charlist*] 或 [!*charlist*] | 不在字符列中的任何单一字符 |
+
+**IN**操作符用于在WHERE子句中规定多个值，还可以使用**NOT INT**取不在规定内的值。
+
+```sql
+#选择列值在(value1,value2,...)中的记录
+SELECT column1, column2, ...
+FROM table_name
+WHERE column IN (value1, value2, ...);
+```
+
+**BETWEEN**操作符用于选取介于两个值之间的数据范围内的值，**NOT BETWEEN**选取不在范围内的值。*值可以是数值、文本和日期*
+
+```sql
+SELECT column1, column2, ...
+FROM table_name
+WHERE column BETWEEN value1 AND value2;
+```
+
+为了增强可读性，可以为表和列指定别名：使用**AS**关键字。进一步的，还可以把多个列结合在一起，给一个别名：
+
+```sql
+SELECT name, CONCAT(url, ', ', alexa, ', ', country) AS site_info
+FROM Websites;
+```
+
+#### SQL连接（JOIN）
+
+**JOIN**（默认为INNER JOIN）用于将多个表的行结合起来：
+
+```sql
+SELECT column1, column2, ...
+FROM table1
+JOIN table2 ON condition;
+```
+
+- **INNER JOIN**：如果表中有至少一个匹配，则返回行
+- **LEFT JOIN**：即使右表中没有匹配，也从左表返回所有的行
+- **RIGHT JOIN**：即使左表中没有匹配，也从右表返回所有的行
+- **FULL JOIN**：只要其中一个表中存在匹配，则返回行
 
 
 
