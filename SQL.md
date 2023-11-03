@@ -105,6 +105,56 @@ SELECT name, CONCAT(url, ', ', alexa, ', ', country) AS site_info
 FROM Websites;
 ```
 
+**UNION**操作符用于取多个SELECT语句的并集。
+
+```sql
+SELECT column_name(s) FROM table1
+UNION
+SELECT column_name(s) FROM table2;
+```
+
+*注释：UNION操作符选取不同的值，如果需要重复的值，使用UNION ALL*
+
+**SELECT INTO**语句用于将数据从一个表插入到新表当中：
+
+```sql
+SELECT column_name(s)
+INTO newtable [IN externaldb]
+FROM table1;
+```
+
+**INSERT INTO SELECT**语句从一个表复制数据到另一个已存在的表中：
+
+```sql
+INSERT INTO table2
+SELECT * FROM table1;
+#只赋值特定的列
+INSERT INTO table2
+(column_name(s))
+SELECT column_name(s)
+FROM table1;
+```
+
+**CREATE DASEBASE**创建数据库：
+
+```sql
+CREATE DATABASE dbname;
+```
+
+**CREATE TABLE**创建数据库：
+
+```sql
+CREATE TABLE table_name
+(
+column_name1 data_type(size),
+column_name2 data_type(size),
+column_name3 data_type(size),
+....
+);
+```
+
+
+
 #### SQL连接（JOIN）
 
 **JOIN**（默认为INNER JOIN）用于将多个表的行结合起来：
@@ -120,7 +170,46 @@ JOIN table2 ON condition;
 - **RIGHT JOIN**：即使左表中没有匹配，也从右表返回所有的行
 - **FULL JOIN**：只要其中一个表中存在匹配，则返回行
 
+#### SQL约束
 
+SQL约束用于规定表中的数据规则。
+
+约束可以在创建表示使用`CREATE TABLE`规定，也可以使用`ALTER TABLE`在表创建后规定。
+
+```sql
+CREATE TABLE table_name
+(
+column_name1 data_type(size) constraint_name,
+column_name2 data_type(size) constraint_name,
+column_name3 data_type(size) constraint_name,
+....
+);
+```
+
+在 SQL 中，我们有如下约束：
+
+- **NOT NULL** - 指示某列不能存储 NULL 值。
+- **UNIQUE** - 保证某列的每行必须有唯一的值。
+- **PRIMARY KEY** - NOT NULL 和 UNIQUE 的结合。确保某列（或两个列多个列的结合）有唯一标识，有助于更容易更快速地找到表中的一个特定的记录。
+- **FOREIGN KEY** - 保证一个表中的数据匹配另一个表中的值的参照完整性。
+- **CHECK** - 保证列中的值符合指定的条件。
+- **DEFAULT** - 规定没有给列赋值时的默认值。
+
+**NOT NULL**
+
+在已创建的表中添加约束如下：
+
+```sql
+ALTER TABLE Persons
+MODIFY Age int NOT NULL;
+```
+
+取消约束：
+
+```sql
+ALTER TABLE Persons
+MODIFY Age int NULL;
+```
 
 
 
