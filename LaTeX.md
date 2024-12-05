@@ -181,7 +181,7 @@ $\sqrt{x}$, $\frac{1}{2}$.
 \[ \pm\; \times \; \div\; \cdot\; \cap\; \cup\;\geq\; \leq\; \neq\; \approx \; \equiv \]
 ```
 
-![image-20230830094255397](/home/timi/.config/Typora/typora-user-images/image-20230830094255397.png)
+![image-20230830094255397](./images/image-20230830094255397.png)
 
 连加、连乘、极限、积分等大型运算符分别用 `\sum`, `\prod`, `\lim`, `\int` 生成。他们的上下标在行内公式中被压缩，以适应行高。我们可以用 `\limits` 和 `\nolimits` 来强制显式地指定是否压缩这些上下标。如：
 
@@ -192,17 +192,17 @@ $ \sum\limits _{i=1}^n i\quad \prod\limits _{i=1}^n $
 \[ \lim\nolimits _{x\to0}x^2\quad \int\nolimits_a^b x^2 dx \]
 ```
 
-![image-20230830094218494](/home/timi/.config/Typora/typora-user-images/image-20230830094218494.png)
+![image-20230830094218494](./images/image-20230830094218494.png)
 
 多重积分可以使用 `\iint`, `\iiint`, `\iiiint`, `\idotsint` 等命令输入。
 
-![image-20230830093913589](/home/timi/.config/Typora/typora-user-images/image-20230830093913589.png)
+![image-20230830093913589](./images/image-20230830093913589.png)
 
 #### 定界符
 
 各种括号用 `()`, `[]`, `\{\}`, `\langle\rangle` 等命令表示；注意花括号通常用来输入命令和环境的参数，所以在数学公式中它们前面要加 `\`。对于`||与|| ||`，amsmath 宏包推荐用 `\lvert\rvert` 和 `\lVert\rVert` 取而代之。
 
-![image-20230830094840481](/home/timi/.config/Typora/typora-user-images/image-20230830094840481.png)
+![image-20230830094840481](./images/image-20230830094840481.png)
 
 为了调整这些定界符的大小，amsmath 宏包推荐使用 `\big`, `\Big`, `\bigg`, `\Bigg` 等一系列命令放在上述括号前面调整大小。
 
@@ -218,7 +218,7 @@ $ \sum\limits _{i=1}^n i\quad \prod\limits _{i=1}^n $
 \rVert\bigr\rVert\Bigr\rVert\biggr\rVert\Biggr\rVert \]
 ```
 
-![image-20230830095142150](/home/timi/.config/Typora/typora-user-images/image-20230830095142150.png)
+![image-20230830095142150](./images/image-20230830095142150.png)
 
 #### 省略号
 
@@ -229,7 +229,7 @@ $ \sum\limits _{i=1}^n i\quad \prod\limits _{i=1}^n $
 \vdots\quad \ddots \]
 ```
 
-![image-20230830095716152](/home/timi/.config/Typora/typora-user-images/image-20230830095716152.png)
+![image-20230830095716152](./images/image-20230830095716152.png)
 
 #### 矩阵
 
@@ -243,7 +243,7 @@ $ \sum\limits _{i=1}^n i\quad \prod\limits _{i=1}^n $
 \begin{Vmatrix} a&b\\c&d \end{Vmatrix} \]
 ```
 
-![image-20230830100337640](/home/timi/.config/Typora/typora-user-images/image-20230830100337640.png)
+![image-20230830100337640](./images/image-20230830100337640.png)
 
 使用 `smallmatrix` 环境，可以生成行内公式的小矩阵。
 
@@ -251,7 +251,7 @@ $ \sum\limits _{i=1}^n i\quad \prod\limits _{i=1}^n $
 Marry has a little matrix $ ( \begin{smallmatrix} a&b\\c&d \end{smallmatrix} )
 ```
 
-![image-20230830100612884](/home/timi/.config/Typora/typora-user-images/image-20230830100612884.png)
+![image-20230830100612884](./images/image-20230830100612884.png)
 
 #### 多行公式
 
@@ -270,7 +270,7 @@ d+e+f+g
 \end{multline}
 ```
 
-![image-20230830101027601](/home/timi/.config/Typora/typora-user-images/image-20230830101027601.png)
+![image-20230830101027601](./images/image-20230830101027601.png)
 
 ##### 对齐
 
@@ -283,7 +283,7 @@ x ={}& a+b+c+{} \\
 \end{aligned}\]
 ```
 
-![image-20230830101213246](/home/timi/.config/Typora/typora-user-images/image-20230830101213246.png)
+![image-20230830101213246](./images/image-20230830101213246.png)
 
 #### 公式组
 
@@ -311,7 +311,7 @@ x,\quad x>0
 \end{cases} \]
 ```
 
-![image-20230830102345202](/home/timi/.config/Typora/typora-user-images/image-20230830102345202.png)
+![image-20230830102345202](./images/image-20230830102345202.png)
 
 ### 插入图片与表格
 

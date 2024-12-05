@@ -140,7 +140,7 @@ GET与POST的区别：
 
 结构如下：
 
-![节点树](https://qiniu.cuiqingcai.com/5fe0q.jpg)
+![节点树](./images/5fe0q.jpg)
 
 *通过 HTML DOM，树中的所有节点均可通过 JavaScript 访问，所有 HTML 节点元素均可被修改，也可以被创建或删除。*
 
@@ -1325,7 +1325,7 @@ XPath提供了很多节点轴选择方法，包括获取子元素，兄弟元素
 
 ### Scrapy
 
-<img src="/home/timi/.config/Typora/typora-user-images/image-20230905215744325.png" alt="image-20230905215744325" style="zoom:67%;" />
+<img src="./images/image-20230905215744325.png" alt="image-20230905215744325" style="zoom:67%;" />
 
 - **Scrapy Engine(引擎)**: 负责Spider、ItemPipeline、Downloader、Scheduler中间的通讯，信号、数据传递等。
 - **Scheduler(调度器)**: 它负责接受引擎发送过来的Request请求，并按照一定的方式进行整理排列，入队，当引擎需要时，交还给引擎。
