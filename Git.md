@@ -84,7 +84,7 @@ HEAD is now at ...
 
 Git的版本库中有被称为stage或index的暂存区，及Git自动创建的第一个分支`master`及指向`master`的一个指针`HEAD`。
 
-![git-repo](https://www.liaoxuefeng.com/files/attachments/919020037470528/0)
+![git-repo](./images/repo.png)
 
 在版本控制的两步中：
 
